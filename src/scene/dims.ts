@@ -1,0 +1,22 @@
+export const P = 1;
+export const HOLE_R = 0.42;
+export const DISC_R = 0.38;
+export const DISC_T = 0.15;
+export const FRONT_T = 0.14;
+export const BACK_T = 0.08;
+export const SLOT = DISC_T + 0.05;
+export const MARGIN_X = 0.42;
+export const MARGIN_TOP = 0.32;
+export const MARGIN_BOTTOM = 0.62;
+export const BOARD_W = 7 * P + 2 * MARGIN_X;
+export const BOARD_H = 6 * P + MARGIN_TOP + MARGIN_BOTTOM;
+export const LIFT = 0.55;
+export const Y0 = LIFT + MARGIN_BOTTOM + P / 2;
+export const TOP_Y = LIFT + BOARD_H;
+export const CENTER_Y = LIFT + BOARD_H / 2;
+export const DISC_Z = 0;
+export const FRONT_Z = SLOT / 2;
+export const BACK_Z = -SLOT / 2;
+
+export const colX = (c: number): number => (c - 3) * P;
+export const rowY = (r: number): number => Y0 + r * P;

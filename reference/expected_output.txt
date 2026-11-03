@@ -1,0 +1,55 @@
+A. building the state space of the model ...
+   computing the true cost of every state ...
+   states (our turn, game not over) : 3,174,822
+   longest game                     : 21 moves
+   true cost from the empty board   : 4 moves, h = 4
+   states with a win still possible : 918,161 (28.9%)
+   PASS  reachable states: 3174822
+   PASS  longest game: 21
+   PASS  true cost from empty board: 4
+   PASS  h(empty): 4
+B. heuristic, checked on the whole state space
+   admissible  h <= h*     : 0 violations in 3,174,822 states
+   consistent  h <= 1 + h' : 0 violations in 4,939,081 transitions
+   mean h = 1.16, mean true cost = 2.52, h exact on 36.6% of winnable states
+   PASS  admissibility violations: 0
+   PASS  consistency violations: 0
+   PASS  transitions checked: 4939081
+C. search methods on all 565 opening boards (at most 4 of our moves played; true cost 1 to 9, mean 4.45)
+   PASS  opening boards: 565
+   method                solved  fastest win  expansions   memory   empty board
+   Breadth-first            565          565       152.5    401.3   win in 4, 130 expansions, 405 states
+   Depth-first              565            4       434.3     14.0   win in 10, 10 expansions, 10 states
+   Iterative deepening      565          565      2310.1      5.4   win in 4, 1083 expansions, 5 states
+   Greedy best-first        565          305        55.0    148.1   win in 7, 14 expansions, 63 states
+   A*                       565          565       147.0    404.6   win in 4, 25 expansions, 142 states
+   IDA*                     565          565       270.8      4.4   win in 4, 12 expansions, 4 states
+   PASS  Breadth-first optimal: 565
+   PASS  Breadth-first expansions: 152.5
+   PASS  Breadth-first memory: 401.3
+   PASS  Depth-first optimal: 4
+   PASS  Depth-first expansions: 434.3
+   PASS  Depth-first memory: 14.0
+   PASS  Iterative deepening optimal: 565
+   PASS  Iterative deepening expansions: 2310.1
+   PASS  Iterative deepening memory: 5.4
+   PASS  Greedy best-first optimal: 305
+   PASS  Greedy best-first expansions: 55.0
+   PASS  Greedy best-first memory: 148.1
+   PASS  A* optimal: 565
+   PASS  A* expansions: 147.0
+   PASS  A* memory: 404.6
+   PASS  IDA* optimal: 565
+   PASS  IDA* expansions: 270.8
+   PASS  IDA* memory: 4.4
+D. example board from the Assignment 3 report
+   .......
+   .......
+   .......
+   ...O...
+   ..OX...
+   ..XXO..
+   PASS  example h: 2
+   PASS  example true cost: 4
+time: 28 s
+ALL REFERENCE NUMBERS MATCH
